@@ -1,23 +1,23 @@
 //
 //  Calculator.h
-//  ObjC
+//  Fraction_Calculator
 //
-//  Created by MF839-008 on 2016. 5. 24..
-//  Copyright © 2016년 JRChae. All rights reserved.
+//  Created by KoJunil on 2016. 5. 13..
+//  Copyright © 2016년 Test. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "Fraction.h"
 
-@interface Calculator : NSObject
+@interface Calculator : NSObject {
+    Fraction *operand1;
+    Fraction *operand2;
+    Fraction *accumulator;
+}
 
-//누산기 메서드
-- (void) setAccumulator:(double) value;
-- (void) clear;
-- (double) accumulator;
+@property (retain, nonatomic) Fraction *operand1, *operand2, *accumulator;
 
-//산술 연산 메서드
-- (void) add:(double) value;
-- (void) subtract:(double) value;
-- (void) multiply:(double) value;
-- (void) divide:(double) value;
+-(Fraction *) performOperation: (char) op;
+-(void) clear;
+
 @end

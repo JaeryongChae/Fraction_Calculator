@@ -1,20 +1,28 @@
 //
 //  Fraction.h
-//  ObjC
+//  Fraction_Calculator
 //
-//  Created by MF839-008 on 2016. 5. 24..
-//  Copyright © 2016년 JRChae. All rights reserved.
+//  Created by KoJunil on 2016. 5. 13..
+//  Copyright © 2016년 Test. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Fraction : NSObject
+@interface Fraction : NSObject {
+    int numerator;
+    int denominator;
+}
 
 @property int numerator, denominator;
 
-- (void) print;
-- (double) convertToNum;
-- (void) setTo:(int)n over:(int)d;
-- (void) reduce;
+-(void) print;
+-(void) setTo: (int) n over: (int) d;
+-(Fraction *) add: (Fraction *) f;
+-(Fraction *) subtract: (Fraction *) f;
+-(Fraction *) multiply: (Fraction *) f;
+-(Fraction *) divide: (Fraction *) f;
+-(void) reduce;
+-(double) convertToNum;
+-(NSString *) convertToString;
 
 @end
