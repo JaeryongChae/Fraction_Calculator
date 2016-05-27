@@ -152,6 +152,12 @@
     
     [displayString setString:@""];
     _display.text = displayString;
+    
+    // Add
+    UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    
+    myView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:myView]; // myView를 Subview로 보이도록 하라.
 }
 
 - (IBAction) unwind:(UIStoryboardSegue *)seque {
